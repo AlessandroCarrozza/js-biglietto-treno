@@ -24,5 +24,6 @@ if (etaUtente <= 17) {
     totPriceSenior = totPriceSenior.toFixed(2);
     document.getElementById("price").innerHTML = "Il prezzo del tuo ticket Senior è di " + totPriceSenior + "€" + " a cui è stato attivato uno sconto del 40%.";
 } else {
-    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket Senior è di " + totPrice + "€" + ".";
+    totPrice = totPrice.toFixed(2);
+    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket è di " + totPrice + "€" + ".";
 }
