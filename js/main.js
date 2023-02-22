@@ -17,10 +17,12 @@ let totPriceSenior;
 // istruzioni condizionali
 if (etaUtente <= 17) {
     totPriceJunior = totPrice - ((totPrice * 20) / 100);
-    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket è di " + totPriceJunior + "€";
+    totPriceJunior = totPriceJunior.toFixed(2);
+    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket Junior è di " + totPriceJunior + "€" + " a cui è stato attivato uno sconto del 20%.";
 } else if (etaUtente >= 65) {
     totPriceSenior = totPrice - ((totPrice * 40) / 100);
-    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket è di " + totPriceSenior + "€";
+    totPriceSenior = totPriceSenior.toFixed(2);
+    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket Senior è di " + totPriceSenior + "€" + " a cui è stato attivato uno sconto del 40%.";
 } else {
-    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket è di " + totPrice + "€";
+    document.getElementById("price").innerHTML = "Il prezzo del tuo ticket Senior è di " + totPrice + "€" + ".";
 }
